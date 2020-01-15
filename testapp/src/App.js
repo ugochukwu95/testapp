@@ -20,12 +20,13 @@ export default class App extends Component {
   }
 
   updateTotal = () => {
-    this.setState(state => {
+    this.setState(state => ({
       total: state.fieldValues.reduce((total, val) => total += val, 0)
-    })
+    }))
   }
 
   render() {
+    // throw new Error("something went wrong");
     return <div className="m-2">
       <h5 className="bg-primary text-white text-center p-2">
         { this.state.title }
